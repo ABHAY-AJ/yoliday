@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PortfolioItem = ({ item }) => {
-  const imgBaseUrl = "http://localhost:1337";
+  const imgBaseUrl = import.meta.env.VITE_API_URL;
   const imageUrl = item.image?.formats?.small?.url || item.image?.url || '/placeholder.svg';
 
   // Extract description text
