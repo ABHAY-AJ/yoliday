@@ -10,7 +10,7 @@ const usePortfolioData = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://localhost:1337/api/portfolio-items?populate=*'
+          `${import.meta.env.VITE_API_URL}/api/portfolio-items?populate=*`
         );
         console.log('API Response:', response.data); // Log the API response
         setPortfolioItems(response.data.data);
